@@ -1,0 +1,8 @@
+@import "../../styles/utilities";
+
+.overlay {
+  padding: 30px 0 30px 0;
+  margin: auto;
+  background: $overlay-clr;
+  border-radius: $border-rds;
+}

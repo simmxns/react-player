@@ -1,0 +1,64 @@
+@import "../../styles/utilities";
+
+.layer__bottom {
+	margin: -50px 35px 0 35px;
+
+	.progress__top {
+		margin-top: 50px;
+
+		.progress__duration {
+			float: right;
+			font-size: 0.75rem;
+			color: $font-clr;
+		}
+	}
+	.player__info {
+		h4 {
+			color: $font-clr;
+			font-weight: 500;
+			font-size: 1.2rem;
+		}
+		p {
+			color: $font-sec-clr;
+			font-weight: 300;
+			font-size: 1rem;
+		}
+	}
+	.progress__area {
+		width: 100%;
+		height: 8px;
+		background: #ccc;
+		border-radius: 50px;
+		margin-top: 18px;
+		cursor: pointer;
+
+		.progress__bar {
+			width: 0%;
+			height: inherit;
+			border-radius: inherit;
+			position: relative;
+			background: linear-gradient(90deg, $primary 0%, $secondary 100%);
+
+			&:before {
+				content: '';
+				position: absolute;
+				height: 14px;
+				width: 14px;
+				background: inherit;
+				border-radius: inherit;
+				top: 50%;
+				transform: translateY(-50%);
+				right: -5px;
+				opacity: 0;
+				transition: opacity 0.2s ease;
+			}
+		}
+		&:hover .progress__bar:before {
+			opacity: 1;
+		}
+	}
+	.progress__time {
+		font-size: 0.725rem;
+		color: $font-clr;
+	}
+}
