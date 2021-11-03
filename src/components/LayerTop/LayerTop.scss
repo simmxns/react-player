@@ -75,3 +75,22 @@
 		font-size: 1.35rem;
 	}
 }
+
+.icon {
+	$width: 5.35rem;
+	$height: 5.35rem;
+
+	width: $width;
+	height: $height;
+	border-radius: 50%;
+	border: 10px solid $overlay-clr;
+	box-shadow: $shadow-size $shadow-clr, $shadow-size $shadow-clr inset;
+	@include flexCenter();
+	cursor: pointer;
+
+	svg {
+		font-size: 1.85rem;
+		color: $overlay-clr;
+		filter: drop-shadow($shadow-size #000);
+	}
+}
